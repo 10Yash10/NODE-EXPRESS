@@ -1,0 +1,18 @@
+###
+
+GET http://localhost:8080/api/products
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDIzNGU2ZmRkMDkyNjI1OWIyZjE1NCIsImlhdCI6MTc3ODcwMTIzNiwiZXhwIjoxNzc4NzAxNTM2fQ.M8lJ_ZzApspgm_l7I4vv0i4h0BsEkT_YKBJYd1uX3SY
+
+###
+
+POST http://localhost:8080/api/products
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDIzNGU2ZmRkMDkyNjI1OWIyZjE1NCIsImlhdCI6MTc3ODcwMTIzNiwiZXhwIjoxNzc4NzAxNTM2fQ.M8lJ_ZzApspgm_l7I4vv0i4h0BsEkT_YKBJYd1uX3SY
+
+{
+    "name": "Apple iPhone 17",
+    "description": "Apple product of mobile phone category",
+    "price": 850.99,
+    "quantity": 1525
+}

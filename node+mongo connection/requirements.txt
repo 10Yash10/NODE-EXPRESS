@@ -1,0 +1,4 @@
+# clone this project
+# run "npm install" to install the all the dependencies and packages
+# run your mongoDB server and paste the connection string in every file for now. Later i will create a single .env file that contain the mongoDB_url.
+# then individually run "node app_list.js", "node app_insert.js", "node app_update.js", "app_delete.js"

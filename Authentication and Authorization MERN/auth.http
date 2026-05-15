@@ -1,0 +1,26 @@
+###
+
+GET http://localhost:8080/status
+
+### 
+
+POST http://localhost:8080/api/auth/register
+Content-Type: application/json
+
+{
+    "firstName": "Yash",
+    "lastName": "Sharma",
+    "email": "yashsharma3@gmail.com",
+    "password": "Yash@123",
+    "contactInformation": "1234567898"
+}
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "yashsharma@gmail.com",
+    "password": "yash@123"
+}
