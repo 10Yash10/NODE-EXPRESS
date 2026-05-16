@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 const User = require("../models/User");
-const { InvalidUserError, ValidationError } = require("../errors/customError");
+const {
+  InvalidUserError,
+  ValidationError,
+  AuthenticationFailed,
+} = require("../errors/customError");
 const jwt = require("jsonwebtoken");
 const argon2 = require("argon2");
 
@@ -13,7 +17,7 @@ const loginService = async (user) => {
   if (!existingUser) {
     throw new InvalidUserError("No User Found");
   } else if (!user || !(await argon2.verify(existingUser.password, password))) {
-    throw new InvalidUserError("Wrong Password");
+    throw new AuthenticationFailed("Wrong Password");
   } else {
     return jwt.sign({ id: existingUser.id }, "super-secret-key-2026", {
       expiresIn: "5m",
