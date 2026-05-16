@@ -1,0 +1,10 @@
+
+###
+
+GET http://localhost:3000/auth/api/login
+Content-Type: application/json
+
+{
+    "email": "yashsharma@gmail.com",
+    "password": "yash@123"
+}
