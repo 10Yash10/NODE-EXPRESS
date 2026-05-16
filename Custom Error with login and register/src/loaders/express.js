@@ -13,11 +13,11 @@ module.exports = (app) => {
 
   // global error handler
   app.use((err, req, res, next) => {
-    err.statusCode = err.statusCode || 500;
+    err.code = err.code || 500;
     err.message = err.message || "Error";
 
-    res.status(err.statusCode).json({
-      statusCode: err.statusCode,
+    res.status(err.code).json({
+      code: err.code,
       message: err.message,
     });
   });
